@@ -7,7 +7,7 @@ module.exports = function(source) {
     plugins: [ "transform-es2015-modules-commonjs" ]
   });
 
-  var options   = loaderUtils.getOptions(this);
+  var options   = loaderUtils.getOptions(this) || {};
   var plugins   = options.plugins || [];
   var finalCode = 'var jss = require("jss").default;\n';
 
