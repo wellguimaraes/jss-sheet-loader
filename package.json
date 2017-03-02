@@ -1,7 +1,7 @@
 {
   "name": "jss-sheet-loader",
-  "version": "1.0.1",
-  "description": "Create and load jss with no extra pain",
+  "version": "1.0.2",
+  "description": "Create and load jss with no pain",
   "main": "index.js",
   "author": "Wellington Guimaraes",
   "license": "MIT",
