@@ -30,9 +30,11 @@ Webpack config file:
 
 JSS file (you can use .jss extension and make your editor/IDE handle it like .js):
 ```js
+import myColors from 'path/to/my/colors.js';
+
 export default {
   lorem: {
-    color: 'orange',
+    color: myColors.orange,
     margin: 10
   }
 }
