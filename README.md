@@ -5,6 +5,28 @@ Create and load jss with no pain
 `npm i jss-sheet-loader --save`
 
 ## Use it
+
+JSS file (you can use .jss extension and make your editor/IDE handle it like .js):
+```js
+import myColors from 'path/to/my/colors.js';
+
+export default {
+  myElement: {
+    color: myColors.orange,
+    margin: 10
+  }
+}
+```
+
+JS file:
+```jsx
+import styles from 'path/to/jss/file.jss';
+
+// ...
+
+<div className={styles.myElement}>Some content</div>
+```
+
 Webpack config file:
 ```js
 {
@@ -28,23 +50,37 @@ Webpack config file:
 }
 ```
 
-JSS file (you can use .jss extension and make your editor/IDE handle it like .js):
-```js
-import myColors from 'path/to/my/colors.js';
+## Keywords injection
 
+Combined with `jss-expand` plugin, you can use the following syntax:
+
+```
 export default {
-  lorem: {
-    color: myColors.orange,
-    margin: 10
+  myElement: {
+    border    : [2, solid, black],
+    display   : flex,
+    flexAlign : flexEnd
+    color     : red,
   }
 }
 ```
 
-JS file:
-```jsx
-import styles from 'path/to/jss/file.jss';
+You actually don't need to declare `var solid = "solid"` or any other css keyword, just set loader option `injectKeywords` to true and the magic is done:
 
-// ...
-
-<div className={styles.lorem}>Some content</div>
+```js
+{
+  //...
+  {
+    // ...
+    use    : [ {
+      loader : 'jss-sheet-loader',
+      options: {
+        injectKeywords: true,
+        plugins: [
+          // ...
+        ]
+      }
+    } ]
+  }
+}
 ```
