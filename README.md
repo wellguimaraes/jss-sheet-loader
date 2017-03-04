@@ -52,7 +52,7 @@ Webpack config file:
 
 ## Keywords injection
 
-Combined with `jss-expand` plugin, you can use the following syntax:
+Combined with `jss-expand` and `jss-default-unit` plugin, you can use the following syntax:
 
 ```js
 export default {
@@ -60,12 +60,11 @@ export default {
     border    : [2, solid, black],
     display   : flex,
     flexAlign : flexEnd
-    color     : red,
   }
 }
 ```
 
-You actually don't need to declare `var solid = "solid"` or any other css keyword, just set loader option `injectKeywords` to true and the magic is done:
+You don't need to declare `var solid = "solid"` or any other css keyword, just set loader option `injectKeywords` to true and the magic is done:
 
 ```js
 {
