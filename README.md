@@ -54,7 +54,7 @@ Webpack config file:
 
 Combined with `jss-expand` plugin, you can use the following syntax:
 
-```
+```js
 export default {
   myElement: {
     border    : [2, solid, black],
