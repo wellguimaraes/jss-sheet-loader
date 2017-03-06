@@ -55,16 +55,32 @@ Webpack config file:
 Combined with `jss-expand` and `jss-default-unit` plugin, you can use the following syntax:
 
 ```js
+const borderWidth = 2;
+
 export default {
   myElement: {
-    border    : [2, solid, black],
+    border    : [borderWidth, solid, black],
     display   : flex,
     flexAlign : flexEnd
   }
 }
 ```
 
-You don't need to declare `var solid = "solid"` or any other css keyword, just set loader option `injectKeywords` to true and the magic is done:
+Instead of
+
+```js
+const borderWidth = 2;
+
+export default {
+  myElement: {
+    border    : `${borderWidth}px solid black`,
+    display   : 'flex',
+    flexAlign : 'flex-end'
+  }
+}
+```
+
+And you don't need to declare `var solid = "solid"` or any other css keyword, just set loader option `injectKeywords` to true and the magic is done:
 
 ```js
 {
