@@ -1,6 +1,7 @@
 module.exports = {
   stretch              : 'stretch',
   center               : 'center',
+  flex                 : 'flex',
   flexStart            : 'flex-start',
   flexEnd              : 'flex-end',
   spaceBetween         : 'space-between',
