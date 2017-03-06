@@ -72,6 +72,7 @@ module.exports = {
   icon                 : 'icon',
   infinite             : 'infinite',
   inherit              : 'inherit',
+  inlineFlex           : 'inline-flex',
   initial              : 'initial',
   inset                : 'inset',
   inside               : 'inside',
