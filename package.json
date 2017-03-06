@@ -1,6 +1,6 @@
 {
   "name": "jss-sheet-loader",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create and load jss with no pain",
   "main": "index.js",
   "author": "Wellington Guimaraes",
@@ -9,6 +9,7 @@
     "babel-core": "^6.23.1",
     "babel-plugin-inline-replace-variables": "^1.2.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
     "jss": "^6.3.0",
     "loader-utils": "^1.0.2",
     "lodash.camelcase": "^4.3.0"
