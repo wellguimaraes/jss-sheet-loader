@@ -11,7 +11,7 @@ module.exports = function(source) {
   if (options.injectKeywords)
     babelPlugins.push([ 'inline-replace-variables', keywords ]);
 
-  var transformedCode = babelCore.transform(source, { plugins: babelPlugins, presets: 'es2015' });
+  var transformedCode = babelCore.transform(source, { plugins: babelPlugins, presets: [ 'es2015', 'stage-0' ] });
   var finalCode       = 'var jss = require("jss").default;\n';
 
   jssPlugins.forEach(function(it) {
